@@ -3,7 +3,6 @@ import axios from 'axios';
 
 import './NewPost.css';
 
-
 class NewPost extends Component {
     state = {
         title: '',
@@ -17,8 +16,8 @@ class NewPost extends Component {
             body: this.state.content,
             author: this.state.author
         };
-        axios.post('posts', data)
-            .then (response => {
+        axios.post('/posts', data)
+            .then(response => {
                 console.log(response);
             });
     }
